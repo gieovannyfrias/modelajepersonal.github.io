@@ -16,9 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
             <span class="bar"></span>
         </button>
         <ul class="nav-links" id="nav-menu">
-            <li><a href="/index#Modelos" class="active">Modelos</a></li>
+            <li><a href="/Modelos" class="active">Modelos</a></li>
             <li><a href="/index#agencia">Agencia</a></li>
-            <li><a href="/index#portafolio">Portafolio</a></li>
+            <li><a href="/Portafolio">Portafolio</a></li>
             <li><a href="/index#contacto">Contacto</a></li>
         </ul>
     </nav>`;
