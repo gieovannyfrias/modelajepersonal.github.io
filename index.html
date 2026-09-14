@@ -97,7 +97,7 @@
     <!-- PORTADA PRINCIPAL -->
     <header class="hero">
         <div class="hero-content">
-            <h1>The New <span><i>Generation</i></span></h1>
+            <h1>La Nueva <span><i>Generación</i></span></h1>
             <p>Modelos Exclusivos para Marcas de Impacto Global</p>
         </div>
     </header>
@@ -323,25 +323,25 @@
 <section class="section contact-section" id="contacto">
     <div class="contact-container">
         <div class="contact-header">
-            <h2>Contact <span>Booking</span></h2>
+            <h2>Contactos de <span>contrataciones</span></h2>
             <p class="section-desc">Escríbenos para consultar la disponibilidad de nuestros talentos, tarifas de campañas o propuestas editoriales globales.</p>
         </div>
 
         <div class="contact-grid-layout">
             <!-- Columna de Información Física -->
             <div class="contact-info-panel">
-                <h3>Elite Agency HQ</h3>
+                <h3>Cuartel General de la Agencia de Élite</h3>
                 <div class="info-item">
                     <i class="fa-solid fa-location-dot"></i>
-                    <p>Av. de la Moda 1040, Piso 5<br>Distrito de Alta Costura, CDMX</p>
+                    <p>México, Ciudad de México<br>00000</p>
                 </div>
                 <div class="info-item">
                     <i class="fa-solid fa-envelope"></i>
-                    <p>bookings@eliteagency.com</p>
+                    <p>contacto@gieovannyfrias.com</p>
                 </div>
                 <div class="info-item">
                     <i class="fa-solid fa-phone"></i>
-                    <p>+52 55 1234 5678</p>
+                    <p>+52 55 51570160</p>
                 </div>
                 <div class="info-item">
                     <i class="fa-solid fa-clock"></i>
@@ -351,45 +351,52 @@
 
             <!-- Formulario de Contacto -->
           <section id="#contacto">
-            <form class="contact-form" id="contact-form" onsubmit="handleContactSubmit(event)">
-                <div class="form-row-twin">
-                    <div class="input-group">
-                        <label for="client-name">Nombre o Empresa *</label>
-                        <input type="text" id="client-name" name="nombre_cliente" required placeholder="Ej. Vogue México / Juan Pérez">
+              <form class="contact-form" id="contact-form" onsubmit="handleContactSubmit(event)" action="https://formspree.io/f/mqpkvyng" method="POST">
+        
+        <div class="form-row-twin">
+            <div class="input-group">
+                <label for="client-name">Nombre o Empresa *</label>
+                <input type="text" id="client-name" name="nombre_cliente" required placeholder="Ej. Vogue México / Juan Pérez">
+            </div>
+            <div class="input-group">
+                <label for="client-email">Correo Corporativo *</label>
+                <input type="email" id="client-email" name="correo_cliente" required placeholder="tu@empresa.com">
+            </div>
+        </div>
 
-                    </div>
-                    <div class="input-group">
-                        <label for="client-email">Correo Corporativo *</label>
-                        <input type="email" id="client-email" name="correo_cliente" required placeholder="tu@empresa.com">
-                    </div>
-                </div>
+        <div class="form-row-twin">
+            <div class="input-group">
+                <label for="project-type">Tipo de Proyecto *</label>
+                <select id="project-type" name="tipo_proyecto" required>
+                    <option value="" disabled selected>Selecciona el servicio</option>
+                    <option value="editorial">Campaña Editorial / Revista</option>
+                    <option value="runway">Desfile de Moda / Pasarela</option>
+                    <option value="commercial">Comercial de TV / Video</option>
+                    <option value="e-commerce">Catálogo / E-commerce</option>
+                    <option value="other">Otros</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="talent-interest">Modelo de Interés</label>
+                <!-- CORREGIDO: Se añadió el atributo name="modelo_interes" para que Formspree lo procese -->
+                <input type="text" id="talent-interest" name="modelo_interes" placeholder="Ej. Elena Rostova (Opcional)">
+            </div>
+        </div>
 
-                <div class="form-row-twin">
-                    <div class="input-group">
-                        <label for="project-type">Tipo de Proyecto *</label>
-                        <select id="project-type" name="tipo_proyecto" required>
-                            <option value="" disabled selected>Selecciona el servicio</option>
-                            <option value="editorial">Campaña Editorial / Revista</option>
-                            <option value="runway">Desfile de Moda / Pasarela</option>
-                            <option value="commercial">Comercial de TV / Video</option>
-                            <option value="e-commerce">Catálogo / E-commerce</option>
-                        </select>
-                    </div>
-                    <div class="input-group">
-                        <label for="talent-interest">Modelo de Interés</label>
-                        <input type="text" id="talent-interest" placeholder="Ej. Elena Rostova (Opcional)">
-                    </div>
-                </div>
+        <div class="input-group">
+            <label for="message">Detalles de la Propuesta *</label>
+            <textarea id="message" name="mensaje" rows="5" required placeholder="Cuéntanos sobre las fechas, locación y el concepto del proyecto..."></textarea>
+        </div>
 
-                <div class="input-group">
-                    <label for="message">Detalles de la Propuesta *</label>
-                    <textarea id="message"name="mensaje"  rows="5" required placeholder="Cuéntanos sobre las fechas, locación y el concepto del proyecto..."></textarea>
-                </div>
+        <!-- Filtro Antispam Honeypot Invisible -->
+        <div style="position: absolute; left: -9999px;" aria-hidden="true">
+            <input type="text" id="contact-honeypot" name="security_code" tabindex="-1" autocomplete="off">
+        </div>
 
-                <div class="contact-submit-wrapper">
-                    <button type="submit" class="btn-book btn-submit-contact">Enviar Mensaje</button>
-                </div>
-            </form>
+        <div class="contact-submit-wrapper">
+            <button type="submit" class="btn-book btn-submit-contact">Enviar Mensaje</button>
+        </div>
+    </form>
           </section>
         </div>
     </div>
@@ -402,8 +409,8 @@
 <section class="agency-section" id="agencia">
     <!-- Cabecera de la Sección -->
     <div class="agency-title-group">
-        <p>Our Legacy</p>
-        <h2>The Global <span>Authority</span></h2>
+        <p>Nuestro legado</p>
+        <h2>La Autoridad  <span>Global</span></h2>
         <div class="agency-intro-text">
             <p>Descubriendo y esculpiendo perfiles icónicos para las firmas de moda más influyentes del mundo. No solo gestionamos carreras, diseñamos marcas personales sólidas con un enfoque integral que abarca desde la pasarela de alta costura hasta los ecosistemas digitales contemporáneos.</p>
         </div>
@@ -416,7 +423,7 @@
             <p>Divisiones</p>
         </div>
         <div class="agency-stat-block">
-            <h4>15+</h4>
+            <h4>2+</h4>
             <p>Años de Trayectoria</p>
         </div>
         <div class="agency-stat-block">
@@ -440,7 +447,7 @@
         <!-- Categoría 1: Alta Costura -->
         <div class="agency-category-card">
             <div class="agency-cat-img-box">
-                <img src="https://unsplash.com" alt="Alta Costura" loading="lazy">
+                <img src="https://lh3.googleusercontent.com/d/1ZKVltJP559XoWmaAtCDgkFKV_uqWAwz8=w1000" alt="Alta Costura" loading="lazy">
             </div>
             <div class="agency-cat-info-box">
                 <h3>High Fashion</h3>
@@ -452,7 +459,7 @@
         <!-- Categoría 2: Comercial -->
         <div class="agency-category-card">
             <div class="agency-cat-img-box">
-                <img src="https://unsplash.com" alt="Comercial" loading="lazy">
+                <img src="https://lh3.googleusercontent.com/d/1ZKVltJP559XoWmaAtCDgkFKV_uqWAwz8=w1000" alt="Comercial" loading="lazy">
             </div>
             <div class="agency-cat-info-box">
                 <h3>Commercial</h3>
@@ -464,7 +471,7 @@
         <!-- Categoría 3: Editorial -->
         <div class="agency-category-card">
             <div class="agency-cat-img-box">
-                <img src="https://unsplash.com" alt="Editorial" loading="lazy">
+                <img src="https://lh3.googleusercontent.com/d/1ZKVltJP559XoWmaAtCDgkFKV_uqWAwz8=w1000" alt="Editorial" loading="lazy">
             </div>
             <div class="agency-cat-info-box">
                 <h3>New Faces</h3>
@@ -476,7 +483,7 @@
         <!-- Categoría 4: Curvy / Diversidad -->
         <div class="agency-category-card">
             <div class="agency-cat-img-box">
-                <img src="https://unsplash.com" alt="Curve" loading="lazy">
+                <img src="https://lh3.googleusercontent.com/d/1ZKVltJP559XoWmaAtCDgkFKV_uqWAwz8=w1000" alt="Curve" loading="lazy">
             </div>
             <div class="agency-cat-info-box">
                 <h3>Curve & Icons</h3>
@@ -497,19 +504,19 @@
         <!-- Fila de Encabezado Asimétrico -->
         <div class="about-hero-grid">
             <div class="about-header-text">
-                <span class="about-tag">Est. 2012</span>
-                <h2>Redefining the <span>Minds of Fashion</span></h2>
-                <p class="about-lead">Somos más que una agencia de representación; somos arquitectos de la identidad visual de la próxima generación del diseño global.</p>
+                <span class="about-tag">Fundada. 2026</span>
+                <h2>Redefiniendo las mentes <span>de la moda</span></h2>
+                <p class="about-lead">Somos un sitio de representación; somos arquitectos de la identidad visual de la próxima generación del diseño global.</p>
             </div>
             <div class="about-hero-img-box">
-                <img src="https://unsplash.com" alt="Sesión de Moda Editorial" loading="lazy">
+                <img src="https://lh3.googleusercontent.com/d/1ZKVltJP559XoWmaAtCDgkFKV_uqWAwz8=w1000" alt="Sesión de Moda Editorial" loading="lazy">
             </div>
         </div>
 
         <!-- Fila de Filosofía e Historia Breve -->
         <div class="about-philosophy-grid">
             <div class="about-philosophy-img-box">
-                <img src="https://unsplash.com" alt="Modelo Alta Costura Pasarela" loading="lazy">
+                <img src="https://lh3.googleusercontent.com/d/1ZKVltJP559XoWmaAtCDgkFKV_uqWAwz8=w1000" alt="Modelo Alta Costura Pasarela" loading="lazy">
             </div>
             <div class="about-philosophy-content">
                 <h3>Nuestra Filosofía</h3>
@@ -518,8 +525,8 @@
                 
                 <!-- Bloque de firma decorativa premium -->
                 <div class="about-signature">
-                    <p class="signature-text">Elite Management Directors</p>
-                    <p class="signature-sub">Paris — New York — Milan</p>
+                    <p class="signature-text">Modelaje Personal</p>
+                    <p class="signature-sub">México, Ciudad de México</p>
                 </div>
             </div>
         </div>
@@ -533,8 +540,8 @@
     <div class="gallery-container">
         <!-- Encabezado de la Galería -->
         <div class="gallery-header-box">
-            <span class="gallery-tag">Visual Journal</span>
-            <h2>Editorial <span>Campaigns</span></h2>
+            <span class="gallery-tag">Diario visual</span>
+            <h2>Campañas <span>editoriales</span></h2>
             <p class="gallery-desc">Una mirada íntima a nuestras últimas portadas, desfiles internacionales y producciones de alta costura.</p>
         </div>
 
@@ -542,7 +549,7 @@
         <div class="gallery-mosaic">
             <!-- Foto 1: Vertical Grande -->
             <div class="gallery-item item-tall">
-                <img src="https://unsplash.com" alt="Alta Costura Editorial" loading="lazy">
+                <img src="https://lh3.googleusercontent.com/d/1ZKVltJP559XoWmaAtCDgkFKV_uqWAwz8=w1000" alt="Alta Costura Editorial" loading="lazy">
                 <div class="gallery-hover-overlay">
                     <span class="overlay-title">Paris Fashion Week</span>
                     <p class="overlay-subtitle">Runway Division</p>
@@ -551,7 +558,7 @@
 
             <!-- Foto 2: Cuadrada Estándar -->
             <div class="gallery-item">
-                <img src="https://unsplash.com" alt="Campaña de Primavera" loading="lazy">
+                <img src="https://lh3.googleusercontent.com/d/1ZKVltJP559XoWmaAtCDgkFKV_uqWAwz8=w1000" alt="Campaña de Primavera" loading="lazy">
                 <div class="gallery-hover-overlay">
                     <span class="overlay-title">Vogue Cover Shoot</span>
                     <p class="overlay-subtitle">Editorial Division</p>
@@ -560,7 +567,7 @@
 
             <!-- Foto 3: Horizontal Ancha -->
             <div class="gallery-item item-wide">
-                <img src="https://unsplash.com" alt="Backstage de Moda" loading="lazy">
+                <img src="https://lh3.googleusercontent.com/d/1ZKVltJP559XoWmaAtCDgkFKV_uqWAwz8=w1000" alt="Backstage de Moda" loading="lazy">
                 <div class="gallery-hover-overlay">
                     <span class="overlay-title">Behind The Scenes</span>
                     <p class="overlay-subtitle">Milan Creative HQ</p>
@@ -569,7 +576,7 @@
 
             <!-- Foto 4: Cuadrada Estándar -->
             <div class="gallery-item">
-                <img src="https://unsplash.com" alt="Retrato de Belleza" loading="lazy">
+                <img src="https://lh3.googleusercontent.com/d/1ZKVltJP559XoWmaAtCDgkFKV_uqWAwz8=w1000" alt="Retrato de Belleza" loading="lazy">
                 <div class="gallery-hover-overlay">
                     <span class="overlay-title">Beauty Campaign</span>
                     <p class="overlay-subtitle">Commercial Division</p>
@@ -578,7 +585,7 @@
 
             <!-- Foto 5: Vertical Grande -->
             <div class="gallery-item item-tall">
-                <img src="https://unsplash.com" alt="Sastrería Masculina" loading="lazy">
+                <img src="https://lh3.googleusercontent.com/d/1ZKVltJP559XoWmaAtCDgkFKV_uqWAwz8=w1000" alt="Sastrería Masculina" loading="lazy">
                 <div class="gallery-hover-overlay">
                     <span class="overlay-title">Tailoring Icons</span>
                     <p class="overlay-subtitle">Men division</p>
@@ -587,7 +594,7 @@
 
             <!-- Foto 6: Cuadrada Estándar -->
             <div class="gallery-item">
-                <img src="https://unsplash.com" alt="Moda Urbana" loading="lazy">
+                <img src="https://lh3.googleusercontent.com/d/1ZKVltJP559XoWmaAtCDgkFKV_uqWAwz8=w1000" alt="Moda Urbana" loading="lazy">
                 <div class="gallery-hover-overlay">
                     <span class="overlay-title">Street Style Concept</span>
                     <p class="overlay-subtitle">New Faces</p>
@@ -613,8 +620,8 @@
     <div class="video-container">
         <!-- Encabezado de la Sección -->
         <div class="video-header-box">
-            <span class="video-tag">Moving Motion</span>
-            <h2>Fashion <span>Films & Reels</span></h2>
+            <span class="video-tag">Movimiento</span>
+            <h2>Películas <span>y Reels de Moda</span></h2>
             <p class="video-desc">Campañas en movimiento, coberturas cinematográficas de pasarelas y portafolios en video de nuestros talentos de élite.</p>
         </div>
 
@@ -625,10 +632,12 @@
             <div class="video-card" data-video-url="https://w3schools.com" data-video-title="Aura Campaign 2026" data-video-client="Haute Couture Division">
                 <div class="video-thumbnail-wrapper">
                     <!-- Miniatura de fondo de alta calidad -->
-                    <img src="https://unsplash.com" alt="Campaña de Moda Video">
+                    <img src="https://lh3.googleusercontent.com/d/1ZKVltJP559XoWmaAtCDgkFKV_uqWAwz8=w1000" alt="Campaña de Moda Video">
                     <!-- Botón de Play Premium Estilizado -->
                     <div class="video-play-btn">
-                        <i class="fa-solid fa-play"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
+  <path d="M10.804 8 5 4.633v6.734zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696z"/>
+</svg>
                     </div>
                 </div>
                 <div class="video-meta-info">
@@ -640,9 +649,11 @@
             <!-- Video 2: Pasarela / Runway Backstage -->
             <div class="video-card" data-video-url="https://w3schools.com" data-video-title="Summer Runway Review" data-video-client="Milan Fashion Week">
                 <div class="video-thumbnail-wrapper">
-                    <img src="https://unsplash.com" alt="Pasarela Video">
+                    <img src="https://lh3.googleusercontent.com/d/1ZKVltJP559XoWmaAtCDgkFKV_uqWAwz8=w1000" alt="Pasarela Video">
                     <div class="video-play-btn">
-                        <i class="fa-solid fa-play"></i>
+                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
+  <path d="M10.804 8 5 4.633v6.734zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696z"/>
+</svg>
                     </div>
                 </div>
                 <div class="video-meta-info">
@@ -674,8 +685,8 @@
     <div class="cv-container">
         <!-- Encabezado de la Sección -->
         <div class="cv-header-box">
-            <span class="cv-tag">Professional Path</span>
-            <h2>Agency <span>& Talent CV</span></h2>
+            <span class="cv-tag">Trayectoria profesional</span>
+            <h2>CV de <span>Agencia y Talento</span></h2>
             <p class="cv-desc">Una trayectoria sólida consolidada a través de las pasarelas, producciones y alianzas comerciales más prestigiosas de la industria internacional.</p>
         </div>
 
@@ -692,15 +703,15 @@
                 <div class="cv-timeline">
                     <!-- Item 1 -->
                     <div class="cv-timeline-item">
-                        <div class="cv-time-badge">2024 — Presente</div>
+                        <div class="cv-time-badge">2026 — Presente</div>
                         <h4 class="cv-position">Senior International Model / Booking Lead</h4>
-                        <span class="cv-company">Elite Management Paris & Milan</span>
+                        <span class="cv-company">Modelaje Personal México, Ciudad de México</span>
                         <p class="cv-text-details">Liderazgo en desfiles de alta costura para las semanas de la moda. Coordinación directa con directores creativos de firmas de lujo para el posicionamiento de marca.</p>
                     </div>
 
                     <!-- Item 2 -->
                     <div class="cv-timeline-item">
-                        <div class="cv-time-badge">2021 — 2024</div>
+                        <div class="cv-time-badge">2025 — 2026</div>
                         <h4 class="cv-position">Exclusive Runway Model</h4>
                         <span class="cv-company">Vogue Campaigns / IMG Global Contracts</span>
                         <p class="cv-text-details">Rostro principal en 5 campañas internacionales impresas y digitales de cobertura global. Apertura y cierre de desfiles (First & Last Look) en Nueva York.</p>
@@ -708,7 +719,7 @@
 
                     <!-- Item 3 -->
                     <div class="cv-timeline-item">
-                        <div class="cv-time-badge">2019 — 2021</div>
+                        <div class="cv-time-badge">2026 — 2027</div>
                         <h4 class="cv-position">Commercial & Editorial Talent</h4>
                         <span class="cv-company">Next Management Agency</span>
                         <p class="cv-text-details">Desarrollo de portafolio editorial en catálogos de e-commerce premium y comerciales de alta definición para el mercado asiático y europeo.</p>
@@ -726,7 +737,7 @@
                 <div class="cv-timeline">
                     <!-- Item Educación 1 -->
                     <div class="cv-timeline-item">
-                        <div class="cv-time-badge">2018 — 2019</div>
+                        <div class="cv-time-badge">2026 — 2027</div>
                         <h4 class="cv-position">Máster en Alta Costura y Dirección de Arte</h4>
                         <span class="cv-company">Accademia di Costume e Moda — Roma</span>
                         <p class="cv-text-details">Especialización en análisis del comportamiento escénico, historia de la moda contemporánea y pasarela conceptualizada avanzada.</p>
@@ -734,7 +745,7 @@
 
                     <!-- Item Educación 2 -->
                     <div class="cv-timeline-item">
-                        <div class="cv-time-badge">2015 — 2018</div>
+                        <div class="cv-time-badge">2026 — 2027</div>
                         <h4 class="cv-position">Licenciatura en Artes Visuales y Expresión Corporal</h4>
                         <span class="cv-company">London Metropolitan University</span>
                         <p class="cv-text-details">Formación integral centrada en la proyección ante cámaras de formato cinematográfico, lenguaje corporal y dominio del espacio escénico.</p>
@@ -745,7 +756,7 @@
                 <div class="cv-skills-section">
                     <div class="cv-column-title subtitulo-skills">
                         <i class="fa-solid fa-sliders"></i>
-                        <h3>Performance <span>Metrics</span></h3>
+                        <h3>Métricas de <span>rendimiento</span></h3>
                     </div>
 
                     <!-- Barra de Skill 1 -->
@@ -791,13 +802,13 @@
   <!-- ===================================================
      SECCIÓN: PORTAFOLIO DE PROYECTOS / CAMPAÑAS DE ÉXITO
      =================================================== -->
-  <div id="#portafolio">
+  <section id="#portafolio">
 <section class="portfolio-section" id="proyectos-portafolio">
     <div class="portfolio-container">
         <!-- Encabezado de la Sección -->
         <div class="portfolio-header-box">
-            <span class="portfolio-tag">Selected Works</span>
-            <h2>Featured <span>Campaigns</span></h2>
+            <span class="portfolio-tag">Obras seleccionadas</span>
+            <h2>Campañas <span>destacadas</span></h2>
             <p class="portfolio-desc">Explora las producciones comerciales, las portadas icónicas y las colaboraciones globales que definen nuestra visión creativa.</p>
         </div>
 
@@ -807,7 +818,7 @@
             <!-- Proyecto 1: Destacado Grande Izquierda -->
             <div class="portfolio-project-card project-featured">
                 <div class="project-image-box">
-                    <img src="https://unsplash.com" alt="Campaña Vogue" loading="lazy">
+                    <img src="https://lh3.googleusercontent.com/d/1ZKVltJP559XoWmaAtCDgkFKV_uqWAwz8=w1000" alt="Campaña Vogue" loading="lazy">
                     <div class="project-tag-floating">Cover Story</div>
                 </div>
                 <div class="project-meta-details">
@@ -824,12 +835,12 @@
                 <!-- Proyecto 2 -->
                 <div class="portfolio-project-card">
                     <div class="project-image-box">
-                        <img src="https://unsplash.com" alt="Campaña Gucci" loading="lazy">
+                        <img src="https://lh3.googleusercontent.com/d/1ZKVltJP559XoWmaAtCDgkFKV_uqWAwz8=w1000" alt="Campaña Gucci" loading="lazy">
                         <div class="project-tag-floating">Couture</div>
                     </div>
                     <div class="project-meta-details">
                         <span class="project-year">© 2025</span>
-                        <h3>Gucci Winter Cruise</h3>
+                        <h3>Ccigu Winter Cruise</h3>
                         <p class="project-summary">Campaña global multimedia y desfile en locación histórica. Cobertura completa de pasarela y lookbook digital.</p>
                         <div class="project-credits">Talento: <span>Lucas Sterling</span></div>
                     </div>
@@ -838,11 +849,11 @@
                 <!-- Proyecto 3 -->
                 <div class="portfolio-project-card">
                     <div class="project-image-box">
-                        <img src="https://unsplash.com" alt="Campaña Chanel" loading="lazy">
+                        <img src="https://lh3.googleusercontent.com/d/1ZKVltJP559XoWmaAtCDgkFKV_uqWAwz8=w1000" alt="Campaña Chanel" loading="lazy">
                         <div class="project-tag-floating">Beauty</div>
                     </div>
                     <div class="project-meta-details">
-                        <span class="project-year">© 2025</span>
+                        <span class="project-year">© 2026</span>
                         <h3>Chanel Luminière</h3>
                         <p class="project-summary">Lanzamiento internacional de la línea de alta cosmética enfocada en la luz natural y fotografía macro de alta definición.</p>
                         <div class="project-credits">Talento: <span>Amara Okafor</span></div>
@@ -854,7 +865,7 @@
         </div> <!-- Cierre de portfolio-layout-grid -->
     </div>
 </section>
-  </div>
+  </section>
     <style>
         /* --- ESTILOS DE LUJO Y VARIABLES --- */
         :root {
@@ -2302,47 +2313,6 @@ window.addEventListener('click', (e) => {
         e.target.classList.remove('active');
     }
 });
-// Simulación de envío del Formulario de Contacto Corporativo
-async function handleContactSubmit(event) {
-    event.preventDefault();
-    
-    const form = event.target;
-    const submitBtn = form.querySelector('.btn-submit-contact');
-    const originalText = submitBtn.innerText;
-    
-    // Cambiar estado visual del botón durante el envío de red
-    submitBtn.innerText = "Enviando Propuesta...";
-    submitBtn.disabled = true;
-
-    // Recolectar de forma automática todos los campos del formulario
-    const formData = new FormData(form);
-
-    try {
-        // REEMPLAZAR 'tu-endpoint-o-url-de-api' con la dirección real de tu servidor o Formspree
-        const response = await fetch('tu-endpoint-o-url-de-api', {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
-        });
-
-        if (response.ok) {
-            alert("¡Mensaje enviado con éxito! Nuestro departamento de Bookings se pondrá en contacto contigo en las próximas 24 horas.");
-            form.reset(); // Limpia los cuadros de texto únicamente si la red respondió OK
-        } else {
-            throw new Error('Error en el servidor');
-        }
-
-    } catch (error) {
-        console.error('Error de envío:', error);
-        alert("Hubo un problema al enviar tu mensaje. Por favor, inténtalo de nuevo o escríbenos directamente por correo.");
-    } finally {
-        // Restaurar el botón a su estado original pase lo que pase
-        submitBtn.innerText = originalText;
-        submitBtn.disabled = false;
-    }
-}
       //agencias
       function filtrarDesdeAgencia(categoriaAFiltrar) {
     // 1. Buscar el botón de filtro de la sección de modelos que coincida
