@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. INYECTAR LA NAVBAR AUTOMÁTICAMENTE (Con botón Hamburguesa Premium)
     const navbarHTML = `
     <nav class="navbar">
-        <a href="#" class="logo">MODELAJE<span> PERSONAL</span></a>
+        <a href="#" class="logo"><img src="https://modelajepersonal.gieovannyfrias.com/Imagenes/Logo_transparente.webp" style="width: 100px; height: 60px;">MODELAJE<span> PERSONAL</span></a>
         <!-- Botón de Hamburguesa con 3 líneas CSS -->
         <button class="menu-btn" id="menu-toggle" aria-label="Abrir menú">
             <span class="bar"></span>
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="footer-container">
             <!-- Columna 1: Marca -->
             <div class="footer-column footer-brand">
-                <a href="#" class="logo">MODELAJE<span>PERSONAL</span></a>
+                <a href="#" class="logo"><img src="https://modelajepersonal.gieovannyfrias.com/Imagenes/Logo_transparente.webp" style="width: 100px; height: 60px;">MODELAJE<span>PERSONAL</span></a>
                 <p>Nuestro sitio se enfoca en modelar nuestros usuarios lo mas moderno.</p>
                 <div class="footer-social">
                     <a href="https://www.instagram.com/modelajepersonal" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
@@ -115,6 +115,9 @@ document.addEventListener('DOMContentLoaded', () => {
         font-family: var(--font-display, 'Cormorant Garamond', serif);
         font-size: 2rem; font-weight: 600; letter-spacing: 2px;
         color: var(--text-main, #ffffff); text-decoration: none;
+display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     }
     .logo span { color: var(--gold, #c5a880); }
 
